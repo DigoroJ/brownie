@@ -5,6 +5,5 @@ export interface product {
   longDescription: String;
   name: string;
   category: string;
-  quantity?: number;
   image?: string;
 }

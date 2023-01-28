@@ -29,6 +29,8 @@ export class ListProductsComponent implements OnInit {
       this.products = JSON.parse(localProduct);
 
       this.calculateTotal();
+      console.log(this.products);
+      
     }
   }
 
