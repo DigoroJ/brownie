@@ -71,7 +71,7 @@ export class ProductDescriptionComponent implements OnInit {
 
   addToCart(currentProduct: any) {
     console.log(currentProduct)
-    this.totalInCart++;
+    //this.totalInCart++;
     let num = Number(this.qty.value);
     this.qty.setValue(++num)
    
@@ -92,7 +92,7 @@ export class ProductDescriptionComponent implements OnInit {
   }
 
   minus(currentProduct: any) {
-    this.totalInCart--;
+    // this.totalInCart--;
 
     let num = Number(this.qty.value);
     if(this.qty.value > 1)
