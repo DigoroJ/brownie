@@ -15,41 +15,43 @@ export class ProductsComponent implements OnInit {
   products: product[] = [
     {
       product_id: 2,
-      price: 20.0,
+      price: 150,
       shortDescription: ' Lorem ipsum dolor 2',
       longDescription:
         ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis 2',
-      name: 'lorem ',
-      category: 'fsfsd',
-      image: 'https://i.ibb.co/fNbq6VM/Choc-cream-biscuits.jpg',
+      name: 'Event Cake',
+      category: 'Cakes',
+      image: '../../../assets/cake.jpg',
     },
     {
       product_id: 1,
-      price: 10.0,
+      price: 5,
       shortDescription: ' Lorem ipsum dolor 1',
       longDescription:
         ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis! 1',
-      name: 'lorem ipsun dolor 1',
+      name: 'Cup cake',
       category: 'https://i.ibb.co/fNbq6VM/Choc-cream-biscuits.jpg',
-      image: 'https://i.ibb.co/fNbq6VM/Choc-cream-biscuits.jpg',
+      image: '../../../assets/cupcake.jpg',
     },
     {
       product_id: 4,
-      price: 40.0,
+      price: 15,
       shortDescription: ' Lorem ipsum dolor 4',
       longDescription:
         ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis! 4',
-      name: 'lorem ipsun dolor 4',
+      name: 'Brownie',
       category: 'https://i.ibb.co/fNbq6VM/Choc-cream-biscuits.jpg',
+      image: '../../../assets/brownies.jpg'
     },
     {
       product_id: 3,
-      price: 30.0,
+      price: 10,
       shortDescription: ' Lorem ipsum dolor 3',
       longDescription:
         ' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis 3',
-      name: 'lorem ipsun dolor 3',
-      category: 'https://i.ibb.co/fNbq6VM/Choc-cream-biscuits.jpg',
+      name: 'Bread',
+      category: '../../../assets/bread.jpg',
+      image: '../../../assets/bread.jpg'
     },
   ];
 
@@ -58,6 +60,7 @@ export class ProductsComponent implements OnInit {
 
   totalPriceInCart: number = 0;
   totalInCart: number = 0;
+  filter= false;
 
   constructor(
     private sharedDataService: SharedDataService,

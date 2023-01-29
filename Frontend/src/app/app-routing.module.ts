@@ -13,6 +13,7 @@ import {
   AuthGuardService
 } from './services/auth-guard.service';
 const routes: Routes = [
+  {path: '',   redirectTo: '/home', pathMatch: 'full' },
   {path: "shop", component: ProductsComponent},
   {path: "proceed", component: ProceedComponent},
   {path: "login", component: LoginComponent},
@@ -20,9 +21,8 @@ const routes: Routes = [
   {path: "listproducts", component: ListProductsComponent},
   {path: "productdescription", component: ProductDescriptionComponent},
   {path: "checkout", component: CheckoutComponent},
-  {path: "home", component: LandingPageComponent},
-  { path: "", component: ProductsComponent, canActivate:[AuthGuardService]},
-  {path: '',   redirectTo: '/home', pathMatch: 'full' }
+  {path: "home", component: LandingPageComponent}
+  //{ path: "", component: ProductsComponent, canActivate:[AuthGuardService]}
   
 ];
 

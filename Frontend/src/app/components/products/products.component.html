@@ -91,7 +91,47 @@
         
 
         <!-- store products -->
-        <div class="row">
+        <div *ngIf="filter" class="row">
+          <!-- product -->
+          <div *ngFor="let product of products" class="col-md-4 col-xs-6">
+            <div class="product">
+              <div class="product-img">
+                <img src="{{ product.image }}" alt="" />
+              </div>
+              <div class="product-body">
+               
+                <h3 class="product-name">
+                  <a href="#">{{product.name}}</a>
+                </h3>
+                <h4 class="product-price">
+                  <span>R </span>{{product.price}}<span>.00</span>
+                </h4>
+               
+                <div class="product-btns">
+                  <button class="add-to-wishlist" (click)="addToWishList()">
+                    <i class="fa fa-heart-o"></i
+                    ><span class="tooltipp">add to wishlist</span>
+                  </button>
+
+                  <button class="add-to-wishlist"  (click)="viewMore(product)">
+                    <i class="fa fa-info"></i
+                    ><span class="tooltipp">view more info</span>
+                  </button>
+                  
+                  <button class="quick-view" (click)="addToCart(product)"> 
+                    <i class="fa fa-shopping-cart"></i
+                    ><span class="tooltipp">add to cart</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /product -->
+        </div>
+        <!-- /store products -->
+
+        <!-- store products -->
+        <div *ngIf="!filter" class="row">
           <!-- product -->
           <div *ngFor="let product of products" class="col-md-4 col-xs-6">
             <div class="product">
